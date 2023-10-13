@@ -19,29 +19,29 @@ Access to a sandbox environment. AWS re/Start students may use `1-[CF]-Lab - San
 1. Scroll down a bit and look for `Runtime Settings`. Change `Handler` from `lambda_function.lambda_handler` to `main.app`.
 1. Inside `main.py`, paste the code below:
 
-```python
-import json
-import urllib3
+   ```python
+   import json
+   import urllib3
 
-def app(event, context):
-    http = urllib3.PoolManager()
-    response = http.request(
-        "GET", 
-        "https://pokeapi.co/api/v2/pokemon{}".format(
-            event['requestContext']['http']['path']
-        )
-    )
-    pokemon = json.loads(response.data)
-    body = {
-        "name": pokemon["name"],
-        "number": pokemon["order"],
-    }
-    return {
-        'statusCode': 200,
-        'body': body   
-    }
-```
-1. Click `Deploy`.
+   def app(event, context):
+       http = urllib3.PoolManager()
+       response = http.request(
+           "GET", 
+           "https://pokeapi.co/api/v2/pokemon{}".format(
+               event['requestContext']['http']['path']
+           )
+       )
+       pokemon = json.loads(response.data)
+       body = {
+           "name": pokemon["name"],
+           "number": pokemon["order"],
+       }
+       return {
+           'statusCode': 200,
+           'body': body   
+       }
+   ```
+2. Click `Deploy`.
 
 ## Task 3: Check your output
 1.  Under `Configuration` tab, look for `Function URL` and open the link to a new tab/window and add a Pokemon name after a slash.
