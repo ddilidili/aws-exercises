@@ -1,5 +1,5 @@
 # PokeDex on AWS Lambda
-[PokeDex](https://static.wikia.nocookie.net/pokemon/images/5/5c/Gen_I_Pokedex.png/revision/latest?cb=20100717083120)
+![PokeDex](https://static.wikia.nocookie.net/pokemon/images/5/5c/Gen_I_Pokedex.png/revision/latest?cb=20100717083120)
 
 ## Requirements
 Access to a sandbox environment. AWS re/Start students may use `1-[CF]-Lab - Sandbox Environment` for this activity.
