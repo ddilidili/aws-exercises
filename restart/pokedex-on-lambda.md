@@ -41,6 +41,7 @@ def app(event, context):
         'body': body   
     }
 ```
+1. Click `Deploy`.
 
 ## Task 3: Check your output
 1.  Under `Configuration` tab, look for `Function URL` and open the link to a new tab/window and add a Pokemon name after a slash.
