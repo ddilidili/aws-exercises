@@ -4,6 +4,9 @@
 ## Requirements
 Access to a sandbox environment. AWS re/Start students may use `1-[CF]-Lab - Sandbox Environment` for this activity.
 
+## Architecture
+![Lambda](../../assets/001-lambda.png)
+
 ## Task 1: Create a Lambda Function
 1. Go to Lambda dashboard by typing `Lambda` on the search bar.
 1. On `Functions` page, click `Create function`.
@@ -12,7 +15,7 @@ Access to a sandbox environment. AWS re/Start students may use `1-[CF]-Lab - San
    - Runtime: Python 3.10
    - Architecture: x84_64
    - Execution Role: Use an existing role (LabsRole)
-1. Under `Advanced Settings`, check `Enable function URL`.
+1. Under `Advanced Settings`, check `Enable function URL`. Set Auth type to `NONE`.
 
 ## Task 2: Add your Python codes
 1. Rename `lambda_function.py` to `main.py`.
@@ -41,7 +44,7 @@ Access to a sandbox environment. AWS re/Start students may use `1-[CF]-Lab - San
            'body': body   
        }
    ```
-2. Click `Deploy`.
+1. Click `Deploy`.
 
 ## Task 3: Check your output
 1.  Under `Configuration` tab, look for `Function URL` and open the link to a new tab/window and add a Pokemon name after a slash.
